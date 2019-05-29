@@ -1,0 +1,489 @@
+---
+title: <br><br><center>Cygate group<center>
+author: "Cutting Edge Events"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" vspace="50" align="right"></A>') 
+    }); 
+</script> 
+
+```{r knitr_init, echo=FALSE, cache=FALSE, message= FALSE,warning=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=750)
+```
+
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(readxl)
+library(shiny)
+library(dplyr)
+library(knitr)
+```
+
+## Programme
+
+### **Programme Overview and timeline**
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(timevis)
+library(dplyr)
+library(readxl)
+
+timeline <- read_excel("timeline.xlsx", sheet = "Sheet1", 
+    col_types = c("date", 
+        "text", "text", "numeric", "text", 
+        "text"))
+
+data <- data.frame( id = 1:length(timeline$start),
+                    start = as.POSIXlt(timeline$start),
+                    content = timeline$content,
+                    group = timeline$group,
+                    type = "box",
+                    style = "background-color:#FF9933;")
+
+groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+
+tl <- timevis(data, groups, showZoom = TRUE, zoomFactor = 0.2, fit = TRUE, width = '100%', height = 300)
+
+tl %>% setOptions(list(orientation = "top", align = "left"))
+
+```
+
+
+### **SUNDAY, JANUARY 26th 2020** 
+
+19:00h Picnics for the group will be ready at the airport to deliver in the buses. 
+The **picnic** composition will be: **Cured ham baguette, apple or fresh fruit brochette, mineral water with gas, chocolate, picnic bag and napkin included** Special diets also included 
+
+19:20h Arrival flight VY8527 from Gothenburg - Terminal 1 - Barcelona airport. 15 people on board. A **30 seater** coach will be ready at the airport and  Cutting Edge Events staff will welcome the group  and transfer the group to hotel H10 Metropolitan. Picnics in bus available for the group 
+
+19:50h Arrival flight VY1266 from Stockholm - Terminal 1 - Barcelona airport. 50 people on board. A **70 seater** coach will be ready at the airport and  Cutting Edge Events staff will welcome the group  and transfer the group to hotel H10 Metropolitan. Picnics in bus available for the group 
+
+Estimated transfer time from Barcelona airport to hotel - 20-25 minutes depending on traffic 
+
+For **Express check-in** the hotel requests the passanger details in advance and keys will be delivered to Tourleader for distribution. 
+
+Overnight at the hotel 
+
+
+### **MONDAY, JANUARY 27th 2020** 
+
+07,00h Buffet breakfast in Hotel and free time until activity departure 
+
+11,00h Departure for winery and lunch activity. 
+
+#### **WINERY OPTIONS** {.tabset .tabset-fade .tabset-pills}
+
+##### **JEAN LEON**
+
+* **Location** Jean Leon Winery - Penedes region
+* **Duration** 1,5 hours plus meal  
+* **Capacity** Minimum 10pax - maximum 150pax 
+* **Included** Bus, visit of the winery, meal and wine tasting
+* **Transfer time** 50 minutes from h10 Metropolitan 
+
+**Jean Leon** invites the visitors to discover the story of an extraordinary man who was ahead of his time. Thanks to his unique vision, he triumphed in Hollywood and achieved his dream of creating a signature wine 
+
+<iframe width="800" height="415" src="https://www.youtube.com/embed/OyDeLQsdS94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In Jean Leon we will do a guided tour of their vineyards and leran about the viticultural taks that they usually perform throughtout the year to obtain the highgest quality grapes, all enjoing the incomparable beauty of the Penedes region. **The tour includes**: 
+
+* **Walking tour of the vineyards** 
+* **Guided tour of the winery** 
+* **Tasting of 3 single vineyard wines** 
+
+if the weather is fine, we will do a wine tasting at the gardens. After that, we will have a lunch in the winery, in a nice glassroom, overlooking Penedes Valley 
+
+**Important note** the winery will be in exclusivity for the group until the end of the lunch. 
+
+<img src = "https://media-cdn.tripadvisor.com/media/photo-s/06/5e/30/51/vinedos-de-jean-leon.jpg" width="360">
+<img src = "https://www.jeanleon.com/wp-content/uploads/2017/08/1994-4.jpg" width="360" align="right">
+
+<img src = "https://cdn1.es.yumping.info/emp/fotos/4/5/6/5/tb_e-19634565-22792292-2010412009245699-4616590512794143747-o15399393978817.jpg" width="800">
+
+
+
+##### **ABADAL**
+
+* **Location** Next to Montserrat Mountains 
+* **Duration** 2 hours plus lunch time 
+* **Capacity** Minimum 10pax - maximum 150pax 
+* **Included** Bus, winery visit, wine tasting and Lunch
+* **Transfer time** 60 minutes from h10 Metropolitan 
+
+for this group, we have selected the tour which **includes**: 
+
+* A private tour of the **Masia Roqueta farmhouse**, which dates back to the **XII century**. The group will go deep into the basement of the house and explore its old cellar, which has been restored to its original state. It is the jewel in the crown of wine history and culture in this region. It is a tour that will take the groui back in time 
+
+* A tour of the **Museum of Industry and transport**. This is the family's privately-owned collection, which is dedicated to transport. It includes a display of carriages, old trucks and tools that were used to make wine in the past 
+
+* A **privat tour of the winery and the wine-ageing cellar** where Abadal wines are made today 
+
+* Guided tasting session of high-end Abadal wines 
+
+* Homemade lunch in an exclusive venue 
+
+<img src = "http://www.jdcermeron.es/web/wp-content/uploads/2013/11/wpid2039-Abadal-008.jpg" width="360">
+<img src = "http://multimedia.catalunya.com/mds/multimedia/36519/F1/" width="320" align="right">
+
+<img src = "http://abadal.net/wp-content/uploads/2018/11/Sopar-Most_OK.jpg">
+
+
+After the lunch, we will take our bus, which transfer the group back to Barcelona 
+
+
+##### **SEGURA VIUDAS & LUNCH IN MIRADOR DE LAS CAVAS**
+
+* **Location** Penedes area 
+* **Duration** Visit and wine tasting 90 minutes + 15 minutes tranfer to Mirador de las Cavas + Lunch time 
+* **Capacity** Minimum 10pax - maximum 70pax 
+* **Included** Bus, winery visit, wine tasting and Lunch
+* **Transfer time** 45 minutes from h10 Metropolitan 
+
+Discover a place where a thousand years of history has shaped a culture of sustainable winegrowing, where the preservation of biodiversity goes hand in hand with innovation; a place where cava and wine are made in harmony. Come to the **segura viudas Estate** and discover the remains of a thousand years that certify the agricultural character of this settlement. **Stroll through their vineyards** and understand the relationship between the land and its inhabitants, established over centuries. Learn about the **growth cycles** of the vine form our master winemakers and delight yourself watching how these harmonies are transmitted into Segura Viudas cavas and wines. The **guided walking tour** is a fascinating exploration of the **winemaking process**, illustrating all the main steps that follow in order tobring our wines and cava to your table. The tour starts in the vineyard to get close to the vines and view the sorrounding land of the Estate. Then we continue down into the cellars foloowing the whole process from vinegrape to bottle and glass. The group will experience a tasting of
+**two cavas** accompanied by a tapa of fuet (typical catalan salami), cheese and chips. More than a unforgetable experience, you will get a Vineyard Diary made with the same sensibility as we make their wines and cavas
+
+
+
+<img src = "https://www.enoturismepenedes.cat/sites/default/files/styles/etp_bt_card/public/proposta/imatge/image-46?itok=Kt-zbcEJ" width="600">
+
+
+
+After the visit, we will come back to the bus and drive until **Mirador de las Cavas** restaurant 
+
+**Mirador de las cavas**
+
+* **Location** Penedes area 
+* **Capacity** Restaurant 85 pax and Banquet hall 250 pax 
+* **Cuisine** Catalan and Mediterranean cuisine 
+
+Located in Subirats surrounded by a natural environment, with privileged **views of Montserrat mountains** and the Alt Penedès zone. The menu has been prepared following the commitment to local producers searching proximity and quality and incorporating cooking grill, ideal for the environment in which it is located. The decor is inspired by elements of the earth, vine and wine, to transform the atmosphere in what is most genuine of Penedès
+
+<img src = "https://calblay.com/wp-content/gallery/restaurant-mirador-2/apartats_restaurant-30.jpg">
+
+
+
+After the winery activity, around 16h, we will come back by bus to Barcelona and we will have some free time until dinner time where we will have the dinner all together. 
+
+For this first night, we offer three different possibilities: **Tragaluz restaurant** and **Windsor** both located walking distance from the Hotel H10 Metropolitan; the second option will be **Torre de Altamar**, where we will impress the group with amazing views from top of cable car tower. 
+
+#### **WELCOME DINNER OPTIONS** {.tabset .tabset-fade .tabset-pills}
+
+##### **WINDSOR**
+
+* **Location:** Eixample Esquerre
+* **Cuisine:** Catalan, Season cuisine
+* **Capacity:** Balmes room 12 pax; Rambla room 22 pax; Corsega room 38 pax; Rosello room 62 pax; Indoor Garden 84 pax; room rosello + garden 140 pax 
+
+In this space we can enjoy outdoors, the sunlight, the peace offered by the interior patio of a typical building in Barcelona’s Eixample, a more relaxed atmosphere and a new menu -which adds to the usual-in which features tapas, small plates and the best gourmet products are the protagonists. 
+
+The respect for tradition, with the right touch of modernity is Windsor’s hallmark and makes it a place of reference to understand the evolution of Catalan cuisine. Here traditional recipes cooked by chef Carlos Alconchel seem different. They're fresher, bolder and lighter, but at the same time they still evoke the taste that we all have engraved in the depths of our memory. These are recipes with a new life, surprising and modern.
+
+<img src = "https://cdn.atrapalo.com/common/photo/res/416/0/ticr_890_370.jpg" width="800"> 
+
+<img src = "https://ucmedia.er2.co/es/restaurant-main/137/960/27316.jpg?1500025826" width="800"> 
+
+
+
+##### **TRAGALUZ**
+
+* **Location:** Eixample Esquerre
+* **Cuisine:** Mediterranean inspired cuisine
+* **Capacity:** 3 different floors with capacity for groiups from 20 to 80 pax 
+
+Passatge de la Concepció –a private and quiet passage that connects Passeig de Gràcia and Rambla Catalunya– seems to be the fetish of **Grupo Tragaluz**, since there are **three of fifteen restaurants** that prestigious group has in Barcelona.
+
+Open since 1989, Tragaluz is its flagship restaurant. Located on the top floor of El Japonés, the restaurant has a complete renovation since 2011 that makes it even more attractive.
+
+We have retained **two levels** and the movable glass roof that allows to enjoy lunches and dinners under the sun or in the moonlight. The first level has a wonderful open kitchen, while the second is also perfect to taste exquisite cocktails.
+
+Moreover, the restaurant remains true to the formula that has achieved so much success. It is a modern Mediterranean-inspired cuisine made with fresh ingredients and always well presented.
+
+<img src = "https://u.tfstatic.com/restaurant_photos/504/1504/169/612/tragaluz-tragaluz-1-0e5a0.jpg" width="800"> 
+
+<img src = "https://cdn.restaurantes.com/static/img/restaurants/130/130633/130633_9680.gl.jpg" width="800"> 
+
+
+##### **TORRE DE ALTAMAR**
+
+* **Location:** Port vell, on top of cable car tower
+* **Cuisine:** Mediterranean inspired cuisine
+* **Capacity:** 1 private space for 38 pax and main dinning room up to 100 pax 
+
+Located on one of the towers of the cable car that goes from La Barceloneta to Montjuïc, 75 meters high, **Torre d'Alta Mar** presents an idyllic scenerio for the most special evenings.
+
+With an exquisite contemporary interior design, the **luxurious restaurant** served up its best dish in the shape of spectacular views over the Mediterranean sea and the city of Barcelona. The experience begins in a glass lift that won't let us miss any details of the privileged place where are in. Once in the restaurant, the setting is simply astonishing, especially at night, and more than well worth a visit to the restaurant.
+
+The menu offers the best of the Mediterraean gastronomy, with top quality products and the chef's personal touch.
+
+<img src = "https://www.torredealtamar.com/wp-content/uploads/2014/12/MG_3550.jpg" width="800"> 
+
+<img src = "https://i.pinimg.com/originals/1e/8a/83/1e8a837cdf6c8b652195489660419c41.jpg" width="800"> 
+
+**Important note** for this restaurant, we will need  transfer 
+
+After the dinner, the group will come back to hotel at leisure except if final choice will be torre de altamar. In this case, we will use the bus to come back to the hotel. 
+
+
+### **TUESDAY, JANUARY 28th 2020 & WEDNESDAY JANUARY 29th 2020** 
+
+07,00h Buffet breakfast in Hotel and the group will go to Fira Gran Via for **CISCO LIVE EVENT** by metro with metro pass at leisure. 
+
+For dinner, we will have country dinners both nights. We can offer 2 different options for these dinners: **one traditional (Casa Guinart, Aguelo 013, Raco de Nuria and Bar Lobo)** and the second option will be a modern and high end options including **Mordisco, Casa Lola, Petit Comite and Vinoteca Torres** All options are located walking distance from hotel **Metropolitan** and of course, if you prefer, you can choose any of the restaurants offered. 
+
+
+
+#### **COUNTRY DINNER OPTIONS** {.tabset .tabset-fade .tabset-pills}
+
+##### **MORDISCO**
+
+* **Location:**Eixample next to Paseig de Gracia (Casa Mila)
+* **Cuisine:**Mediterranean cuisine, with seasonal products
+* **Capacity:** 60 seatead people in cockteleria; Cobered terrace: 24 pax; main dining room: 24 pax
+
+One of the trendiest restaurants in the late 80's and early 90's is back in Barcelona after a two-decade absence. Originally placed where now lies the modern Hotel Omm, Mordisco was reopened in late 2010, again by the prestigious Rosa Esteva’s Grupo Tragaluz.
+
+Now on *Passatge de la Concepció* –its neighbours are Tragaluz and El Japonés–, the restaurant is located in a old stately house that has been renovated with exquisite taste by Sandra Tarruella, Rosa Esteva’s daughter, who has managed to create a modern, cosy and elegant atmosphere.
+
+Behind the original facade, **Mordisco** welcomes us with a charming little delicatessen shop where we can buy everything from wine, preserves, cheeses and sausages, to organic vegetables and dishes from the menu to take away. Before entering the restaurant’s dining room, we will come across a nice waiting area with low tables and a bar perfect for informal meals.
+
+The main dining room, dominated by a work by Mariscal, is covered by a glass roof that incorporates the interior patio and that, at day time, is flooded with natural light. The large central staircase leads to the top floor, that boasts a warmer ambience and houses the cocktail bar, spaces with sofas, armchairs and low tables and a reading area with a fireplace.
+
+<img src = "https://i.pinimg.com/originals/e7/27/9c/e7279c5dd9575b038c904095229e7ecd.jpg" width="800">
+
+
+##### **CASA LOLA**
+
+* **Location:**Rambla Catalunya - City center
+* **Cuisine:**Mediterranean cuisine, Paella and Tapas 
+* **Capacity:** 90 pax
+
+**Casa Lola** restaurant located on Rambla Catalunya is one of the four restaurants with the same name scattered around the city of Barcelona.
+All of them have an attractive 'typical Spanish' menu and an aesthetic that mixes tradition and modernity.
+
+Tapas, montaditos, paella, salads, fried eggs and 'pepitos' make up **Casa Lola's** food offer. And to drink, we could not miss the traditional sangria, which is prepared here to the client's taste with red wine, white wine or cava and combined with red fruits, mint and citrus, melon and watermelon... In addition, they have a good selection of wines and cocktails.
+
+The restaurant is divided into two floors, connected by an emblematic spiral staircase, and also has a pleasant terrace on Rambla Catalunya (not bookable).
+
+
+<img src = "http://barcelona.b-guided.com/imagen.html?filename=upload/guia/casalola-64.jpg&w=632" width="810">
+
+
+#####  **PETIT COMITE**
+
+* **Location:**Eixample next to Paseig de Gracia (Casa Mila)
+* **Cuisine:**Traditional catalan cuisine
+* **Capacity:** 50 pax
+
+A reference of Catalan haute cuisine with a **Michelin star** under his belt, Nandu Jubany runs since February 2014 Petit Comitè, where he proposes a wonderful journey through the best and most traditional Catalan cuisine cooked over low heat with seasonal products of proximity and served with a contemporary presentation. Definitely one of the new city’s must visit restaurants, because it is considered in the top ten restaurants ranking of the city. 
+
+The menu strictly selects the best seasonal products of proximity, which are cooked at low temperature, to offer the dishes of the Catalan tradition, reinterpreted and served with contemporary and modern presentations.
+
+The space , which has also been redesigned, blends a warm setting with a contemporary décor and features different ambiences to suit all occasions
+
+<img src = "http://lagranjadesign.com/wp-content/uploads/2018/07/Petit-Comite-Restaurant_Web_02.jpg" width="800"> 
+
+<img src = "http://gastrory.es/media/local_images/petitcomite001.jpg" width="800"> 
+
+
+##### **VINOTECA TORRES**
+
+* **Location:** Paseig de Gracia next to Casa Mila 
+* **Cuisine:**Traditional catalan cuisine
+* **Capacity:** Private room up to 20 pax; main dinning room 50: terrace 25 pax 
+
+**La Vinoteca Torres** is an exclusive gastronomic space located on **Passeig de Gràcia** that is a meeting point for lovers of gastronomy and oenology. Its unique proposal connects the Mercès cuisine, one of the best caterings in the country, with Torres wines.
+
+It is a traditional restaurant with a bar area, a main dinning room, a private room ideal for small groups and a magnificent terrace in the heart of Barcelona. In addition, in the same restaurant there is also a space dedicated to the wine sales.
+
+The menu is inspired by **traditional Mediterranean cuisine**, but it adds contemporary presentations and a touch of fusion with other cuisines. The offer is completed with a magnificent selection of wines, from the most exclusive to the most traditional, which can be tasted by the glass
+
+
+<img src = "https://www.solwines.es/wp-content/uploads/2018/06/180522-La-Vinoteca-Torres_interior_por-Enrique-Marco.jpg" width="800"> 
+
+<img src = "https://i.pinimg.com/originals/93/8d/57/938d5746c5e75ac260fc643926418bbd.jpg" width="800"> 
+
+
+#####  **RACO DE NURIA**
+
+* **Location:** Barcelona city centre
+* **Cuisine** Tapas, Mediterranean Flavour
+* **Capacity** First floor 70 pax
+
+In classical mythology, Bacchus was the god of wine, ritual madness and religious ecstasy. That's why at this restaurant, will raise you up a few metres above street level. To be precise, the first floor above La Rambla where it merges with Plaça Catalunya.
+
+Down below... the world, the lights, the hustle-and-bustle and the everyday comings and goings of Barcelona. Up above... the pleasure of flavours, smells, colours, ingredients and serenity.
+
+A simply divine location, menu and space.
+
+<img src = "https://media-cdn.tripadvisor.com/media/photo-s/12/4e/60/ef/raco-del-nuria.jpg" width="800">
+
+
+##### **BAR LOBO**
+
+* **Location:** Raval, City Center
+* **Cuisine:** International, Tapas
+* **Capacity:** Group dinning room: 55 pax
+
+**Bar Lobo** is a bar that mixes tapas with light and main dishes for all tastes. Located in a small part of what onces was the old General Tobacco Company of Philippines building, and now is the luxurious Hotel 1898.
+
+This is a modern room with a huge graffiti on the wall and several large windows that look out onto Pintor Fortuny Street. It's aesthetically attractive and very functional, because between the bar stools, the terrace, the tables and the sofas, there are many places to sit down to eat.
+
+The menu includes dishes such as sautéed rice with mushrooms and ginger, tapas like 'bravas' fries, fried artichokes or some with guacamole, as well as all kinds of salads and wok dishes. Some nights , a DJ plays good music while drinks are served, so it's a good place to start a night out in the city center.
+
+
+<img src = "https://cdn.atrapalo.com/common/photo/res/51550/0/ticr_890_370.jpg" width="800"> 
+
+<img src = "https://grupotragaluz.com/wp-content/uploads/2016/09/Restaurantes_BarLobo_01-610x400.jpg" width="800">
+
+
+#####  **AGUELO 013**
+
+* **Location:**City centre near Las Ramblas - Gothic Quarter
+* **Cuisine:**Mediterranean cuisine, with seasonal products
+* **Capacity:** 200 seatead people in total. 3 different spaces: Room Arcos (125 pax); Room Altillo (57 pax); Room B (16 pax)
+
+With a stunning design signed by the trendiest designer Lazaro Rosa-Viola, the space welcomes us with an attractive decorative eclecticism that is both original and striking. The sober and elegant New York style decor is indeed the main attraction of each and every single space in Boca Grande.
+The restaurant, the kitchen of which is led by Xavier Tranque (The Mirror, Ovic) and based on seafood to offer a quality menu, is on the ground floor and dominated by bar where oysters, lobsters, prawns... are displayed. It also has a great terrace in the patio of the building.
+
+The second floor is a fabulous cocktail bar with an oriental touch that will definitely witness great nights, while the top floor houses a nice private room with terrace. Interestingly enough, the bathrooms are located in the basement and share the space with the resident DJ's booth and dim lighting that creates the perfect atmosphere for intimate encounters.
+
+<img src = "https://www.restaurantes.com/blog/wp-content/uploads/2017/06/aguelo-1050x600.jpeg">
+
+
+#####  **CASA GUINART**
+
+* **Location:**City centre in Las Ramblas
+* **Cuisine:**Tapas 
+* **Capacity:** upper floor 24 pax; bar 20 pax; outdoor terrace 40 pax  
+
+The Guinart family founded a business in 1899 in Barcelona’s **Mercat de la Boqueria** that today, more than a century later and run by David Moya (the fourth generation) and his partner, chef and businessman Òscar Manersa (Torre d'Alta Mar), is one of the best tapas bars in this privileged location.
+
+**Casa Guinart** is a superb restaurant offering seasonal market cuisine that works with the best and freshest products from neighbouring stalls, which is served directly from the counter to the grill and from the grill to the plate. Chef Josep Nicolau (Rosal 34) also offers a menu based on elaborate tapas, small plates and dishes inspired by traditional recipes.
+
+The space is spread out over two floors. On the ground floor is the fantastic bar behind which they cook, in a space that opens to the little terrace under the arcades. Upstairs, a cosy dining room with views to La Rambla and the market, exposed brick walls, old wooden tables and the wine cellar -some of the wines are also available by the glass.
+
+<img src = "https://www.amicsdelarambla.cat/media/larambla/image/fotos/2464_Foto.1540465137.jpg">
+
+
+
+### **THURSDAY, JANUARY 30th 2020** 
+
+07,00h Buffet breakfast in Hotel and the group will go to Fira Gran Via for **CISCO LIVE EVENT** by metro with metro pass at leisure. 
+
+For dinner, we will have a group dinner. Again 2 options will be walking distance from the hotel H10 Metropolitan, and an alternative bus transfer option, which includes a **WOW** factor for the event. 
+
+#### **FAREWELL DINNER OPTIONS** {.tabset .tabset-fade .tabset-pills}
+
+
+##### **RESTAURANTE PRINCIPAL**
+
+* **Location:**Eixample next to Paseig de Gracia (Casa Mila)
+* **Cuisine:**Mediterranean cuisine, with seasonal products
+* **Capacity:** Total capacity of the property in cocktail style: 500 pax - per rooms: Biblioteca 64 pax; room 1: 30 pax; Room 2: 38 pax; room 4: 18 pax; Music room; 30; Main dining room: 180 pax 
+
+Located 50 meters from the famous **La Pedrera and Paseo de Gracia**, **El Principal** is a versatile space that allows cohabit a restaurant with its own menu and lounges of various capacities for groups.
+
+It is a stately main floor flooded with natural light thanks to its large windows. It has a magnificent interior courtyard where snacks and cocktails is open during the spring-summer for lunch, dinner or drinks 
+
+**El Principal** bases its cuisine in the traditional Catalan cuisine and seasonal products, 
+
+
+<img src = "http://elprincipaleixample.com/wp-content/uploads/2015/05/Restaurante_El_Principal_Eixample_Barcelona_Cocina_Catalana_Restaurant_Tapas_Bar_Cocktails_Vermouth_Terrace_Kitchen_Chef_Mediterranian_Food_Joan_Ferre_12.jpg">
+
+
+##### **SPEAKEASY**
+
+* **Location:**Eixample next to Paseig de Gracia 
+* **Cuisine:**Mediterranean and creative cuisine
+* **Capacity:** Main restaurant 65 pax 
+
+In honour to the clandestine establishments that appeared in American cities during the Prohibition period, Javier de las Muelas' **Speakeasy** lives in an exquisite **semi-secrecy** that welcomes us in a tremendously intimate atmosphere.
+
+The restaurant is placed in what used to be the warehouse of the prestigious **Dry Martini cocktail bar**, where we find one of the two entries to the restaurant. The other one, **more genuine and mysterious**, is the back door on Carrer Còrsega and leads us -after passing through te kitchen- to a space with faint light and shelves full of bottles from all around the globe.
+
+The chef delights the most expert gourmets with his bold, sophisticated cuisine cooked with topquality market produce.
+
+<img src = "http://www.bcncatfilmcommission.com/sites/default/files/styles/fancybox/public/locations/7155884523_a45fef6c7f_o.jpg?itok=mGVI9Gk7">
+
+<img src = "https://www.aspasios.com/blog/wp-content/uploads/2015/04/Dry_Martini_Bcn.jpg">
+
+
+##### **OLEUM**
+
+* **Location:**Mnac (Montjuic Mountain)
+* **Cuisine:**Mediterranean and fusion cuisine 
+* **Capacity:** Main restaurant 120pax - in exclusivity for the group from 50 paid guests. 
+
+In addition to housing the great **National Art Museum of Catalunya**, the **Palau Nacional de Montjuïc** (National Palace) hosts the magnificent Òleum restaurant, which offers an unparalleled views. From its windows we can see all of Barcelona and at night, on weekend, we can enjoy the magic fountain. It is ideal for art and gastronomy lovers.
+
+It is a very special environment, with a modern design and a sober and elegant atmosphere that gives us impressive **views of Barcelona with Tibidabo** in the background, thanks to huge windows and a panel of slanted mirrors that reflect the profile of the city.
+
+The cuisine presents a Mediterranean-inspired menu made with quality produce. Really, a right choice if we want to impress someone.
+
+<img src = "https://www.museunacional.cat/sites/default/files/foto_restaurant_2.jpg">
+
+<img src = "https://i.pinimg.com/originals/a4/5e/a0/a45ea093855664b4edf9b694427eb83c.jpg">
+
+**Important note** for this restaurant, we will need  transfer 
+
+After the dinner, the group will come back to hotel at leisure except if final choice will be at Oleum restaurant. In this case, we will use the bus to come back to the hotel. 
+
+
+### **FRIDAY, JANUARY 31st 2020** 
+
+07,00h Buffet breakfast in Hotel and free time until departure time 
+
+11:30 Pick up at the hotel by bus up to 30 seater for 15 pax, who will depart with DY4270 to Gothenburg from Barcelona airport - Terminal 2  at 14:00h 
+
+12:45 Pick up at the hotel by bus up to 70 seater for 50 pax depart with D85554 to Stockholm from Barcelona airport - Terminal 2  at 15:15h 
+
+
+END OF THE PROGRAMME
+
+
+## Map
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ppINs3f04Bczm8XX6mRBEFACEqa0iSUv" width="800" height="680"></iframe>
+
+
+*****
+
+## Terms & Conditions
+
+  * Rates valid for 2020.
+  
+  * Net rates for A Company
+  
+  * For a group of minimum 50 pax.
+  
+  * Cutting Edge Events management fee including in the detailed rates
+  
+  * VAT included. 
+  
+  * No reservation has been done. Availability upon request.
+  
+*****
+
+
+
+
+
